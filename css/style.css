@@ -1,6 +1,8 @@
 body{
     transition: .4s;
+    background-color: #fff;
 }
-#image{
-    transition: 1s;
+
+.bg{
+    background-color: black;
 }

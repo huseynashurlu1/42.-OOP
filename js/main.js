@@ -1,223 +1,184 @@
-// // VARIABLES & DATA TYPES
+// // STRING
 
-// // /*
-// // // var - let - const
+// var x = "Altan Ibrahimli salam.Sagol Ibrahimli";
+// x = x.replace("Ibrahimli","Ibrahimov")
+// console.log(x)
+// //var x = new String("Altan");
 
-// // /* Examples for variables
+// var text = "Please visit Microsoft and Microsoft!";
+// var newText = text.replace(/Microsoft/g, "W3Schools");
+// console.log(newText)
 
-// // var firstName = "Altan"
-// // var lastName = 'Ibrahimli'
-// // console.log(firstName)
-// // var x = 10;
-// // x = "Kamil";
-// // console.log(x)
+// var text = "Welcome";
+// var text2 = `The quick
+// brown fox
+// jumps over
+// the lazy dog`;
+// console.log(text)
+// console.log(text2)
 
-// // const a = 20;
-// // const a=30
-// // 
-
-// // var x = null
-// // var n = "";
-
-
-// // // DATA TYPES
-
-// // // Primitive / Non-primitive
-
-// // // number
-// // var age = 20;
-// // var x = "20";
-// // // string
-// // var name = "Altan";
-// // var name = 10;
-// // // undefined
-// // var u;
-// // console.log(u);
-// // // null
-// // var n = null;
-// // // boolean
-// // var b = true;
-
-// // // Array
-// // var lang = ['html','css','js','c#','sql'];
-// // console.log(lang[1])
-// // // Object
-
-// // var Person = {
-// //     name: 'Altan',
-// //     age: 26,
-// //     calculatAge: function(){ 
-// //         return new Date().getFullYear()-this.age
-// //     }
-// // }
-
-// // console.log(Person.name + " " + Person.calculatAge() + "-tevelludur")
-
-
-
-// // function Dark() {
-
-// //     document.getElementById('image').style.filter = "grayscale(1)";
-// //     // document.getElementById('body').style.backgroundColor = "#000"
-// //     // document.getElementById('body').style.color = "#fff"
-
-// // }
-
-
-// // function Light() {
-// //     // document.getElementById('body').style.backgroundColor = "#fff"
-// //     // document.getElementById('body').style.color = "#000"
-// //     document.getElementById('image').style.filter = "grayscale(0)";
-// // }
-
-
-// // typeof
-// var x = "";
-// var y = "Altan"
+// var firstname = "Altan";
 // var age = 25;
-// var empty = null
 
-// console.log(typeof x)
-// console.log(typeof y)
-// console.log(typeof age)
-// console.log(typeof empty)
+// console.log("Telebenin adi " + firstname + "dir.Onun " + age + " yasi var")
+// console.log(`Telebenin adi ${firstname}dir.Onun ${age} yasi var`)
 
+// // NaN ==> Not a number
+// // isNan
 
-// // PRINT TO SCREEN - console / alert / innerHTML / innerText/
-// // console - log,error,warning
+// console.log(isNaN(firstname))
+// console.log(isNaN(age))
+// console.log(typeof NaN)
 
-// console.log('Welcome');
-// console.warn('Welcome');
-// console.error('Welcome');
-// //prompt();
+// var num = 5.57;
+// console.log(num.toExponential())
 
-// //alert("Welcome");
+// var x = "10";
+// var x = new Number(10)
 
-// document.write("FRONT-END DEVELOPMENT");
+// Number(true);
+// Number(false);
+// Number("10");
+// Number("  10");
+// Number("10  ");
+// Number(" 10  ");
+// Number("10.33");
+// Number("10,33");
+// Number("10 33");
+// Number("John");
 
-// document.getElementById('user-name').innerHTML = "<i>Altan</i>";
-// document.getElementById('username').innerText = "<i>Altan</i>";
-
-
-// // OPERATORS
-// // Aritmethic 
-// // Bitwise
-// // Conditional
-// // Comparison
-// // Logical
-
-// var ad = "Amil";
-// var soyad = "Nuriyev";
-// var fullname = ad+" " + soyad
-
-// var n = 10;
-// var m = "20";
-// console.log(n+ " " +m);
+// parseInt("-10");
+// parseInt("-10.33");
+// parseInt("10");
+// parseInt("10.33");
+// parseInt("10 20 30");
+// parseInt("10 years");
+// parseInt("1 yea1rs 10");
 
 
-
-// console.log();
-
-// var x = 10;
-// var y = 5;
-// var cem = x+y;
-// var ferq = x-y;
-// var hasil = x*y;
-// var bolme = x/y;
-// console.log(cem,ferq,hasil,bolme)
-
-// // Template literals
-
-// var a = 5;
-// console.log(++a)
+// parseFloat("10");
+// parseFloat("10.33");
+// parseFloat("10 20 30");
+// parseFloat("10 years");
+// parseFloat("years 10");
 
 
-// var x = 10;
-// var y = 20;
+// var colors = [true,"",null,10];
+// colors[0] = 'red';
+// colors[1] = 'black';
+// colors[5] = 'green';
 
-// x += y;
-// // x = x+y
+// console.log(colors);
+
+// var front = ['html','css','js'];
+// var last_el =  front[front.length-1];
+// console.log(last_el)
 
 
 
-// // var b = a**2;
-
-// // if(a == b) {
-// //     alert('salam');
-// // }
-// // else{
-// //     alert('sagol')
-// // }
 
 
-// */
+// var front = new Array();
+// var back = ['c#','sql','azure'];
 
-// var x = 10;
-// if(x>10 && x<20) {
-//     // 
+// var full_stack = front.concat(back)
+// full_stack.sort();
+// full_stack.reverse();
+// // colors=[]
+// //colors.length = 0
+// console.log(full_stack);
+
+// shift / unshift / pop / push
+
+// var front = ['html','css','js'];
+
+// console.log(front)
+
+
+
+
+
+
+
+
+
+// FUNCTIONS
+
+function ShowMessage(name,age) {
+    console.log("Hello " + name);
+}
+
+var SayHello = function(firstname) {
+    console.log("Hello " + firstname)
+}
+
+var SayHello = firstname => console.log('Hello ' + firstname)
+
+var SayHello = (firstname) => {
+    console.log('Hello ' + firstname)
+}
+
+ShowMessage("Altan",25);
+SayHello("Mayil");
+
+function Calc(x,y) {
+    return x* y;
+}
+
+var Calc = (x,y) => x*y;
+
+var Calc = function(x,y){
+    return x*y;
+}
+
+var Calc = (x,y) => {
+    return x * y;
+}
+console.log(Calc(5,10));
+
+
+var Show = function(name){
+    return name;
+}
+
+Show();
+
+var Show = name => name
+
+
+(function(name){
+    document.write("Salam " + name);
+})("Altan");
+
+
+function Person(name,age,address) {
+    this.name = name;
+}
+
+var User = new Person("Altan");
+
+// var btn = document.getElementById('btn');
+// btn.onclick = function() {
+
 // }
-// else if(x>30 && x<50){
+
+
+function Change() {
+    var body = document.getElementById('body');
+    console.log(body.style.backgroundColor);
+    if(body.style.filter==="invert(1) hue-rotate(180deg)") { 
+        body.style.filter="invert(0) hue-rotate(0deg)"
+    }
+    else{
+        body.style.filter="invert(1) hue-rotate(180deg)"
+    }
+}
+
+
+// var Change = function() {
 
 // }
-// else{
+
+// var Change = () => {
 
 // }
-
-
-// var x = 10
-
-// switch(x){
-//     case 1:
-//         alert("bir");
-//         break;
-//     case 2:
-//         alert("iki");
-//         break;
-//     default:
-//         alert("none");
-//         break;
-// }
-
-
-// if(x>10) {
-//     alert('Access');
-// }
-
-// else{
-//     alert('Block');
-// }
-
-// var number = x>10 ? alert('Access') : alert('Block')
-
-// var ad = "Altan"
-
-// ad=="Altan" ? alert("Hello") : alert("Bye-bye");
-
-
-// var date = new Date().getHours();
-
-
-// if(date>=6 && date<12) {
-//     alert('Good Morning');
-// }
-// else if(date>=12 && date<18) {
-//     alert('Good Afternoon');
-// }
-// else if(date>=18 && date<6){
-//     alert('Good Night');
-// }
-
-
-// PI,round,floor,pow,random,sqrt,min,max,abs,trunc,ceil
-
-var x = 10.5;
-
-var z = Math.trunc(x);
-const pi = Math.PI
-console.log(z);
-console.log(pi);
-
-var texmin = Math.floor(Math.random() * 100)
-
-console.log(texmin)
-
