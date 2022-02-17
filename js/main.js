@@ -1,184 +1,153 @@
-// // STRING
+"use strict";
 
-// var x = "Altan Ibrahimli salam.Sagol Ibrahimli";
-// x = x.replace("Ibrahimli","Ibrahimov")
-// console.log(x)
-// //var x = new String("Altan");
-
-// var text = "Please visit Microsoft and Microsoft!";
-// var newText = text.replace(/Microsoft/g, "W3Schools");
-// console.log(newText)
-
-// var text = "Welcome";
-// var text2 = `The quick
-// brown fox
-// jumps over
-// the lazy dog`;
-// console.log(text)
-// console.log(text2)
-
-// var firstname = "Altan";
-// var age = 25;
-
-// console.log("Telebenin adi " + firstname + "dir.Onun " + age + " yasi var")
-// console.log(`Telebenin adi ${firstname}dir.Onun ${age} yasi var`)
-
-// // NaN ==> Not a number
-// // isNan
-
-// console.log(isNaN(firstname))
-// console.log(isNaN(age))
-// console.log(typeof NaN)
-
-// var num = 5.57;
-// console.log(num.toExponential())
-
-// var x = "10";
-// var x = new Number(10)
-
-// Number(true);
-// Number(false);
-// Number("10");
-// Number("  10");
-// Number("10  ");
-// Number(" 10  ");
-// Number("10.33");
-// Number("10,33");
-// Number("10 33");
-// Number("John");
-
-// parseInt("-10");
-// parseInt("-10.33");
-// parseInt("10");
-// parseInt("10.33");
-// parseInt("10 20 30");
-// parseInt("10 years");
-// parseInt("1 yea1rs 10");
-
-
-// parseFloat("10");
-// parseFloat("10.33");
-// parseFloat("10 20 30");
-// parseFloat("10 years");
-// parseFloat("years 10");
-
-
-// var colors = [true,"",null,10];
-// colors[0] = 'red';
-// colors[1] = 'black';
-// colors[5] = 'green';
-
-// console.log(colors);
-
-// var front = ['html','css','js'];
-// var last_el =  front[front.length-1];
-// console.log(last_el)
-
-
-
-
-
-// var front = new Array();
-// var back = ['c#','sql','azure'];
-
-// var full_stack = front.concat(back)
-// full_stack.sort();
-// full_stack.reverse();
-// // colors=[]
-// //colors.length = 0
-// console.log(full_stack);
-
-// shift / unshift / pop / push
-
-// var front = ['html','css','js'];
-
-// console.log(front)
-
-
-
-
-
-
-
-
-
-// FUNCTIONS
-
-function ShowMessage(name,age) {
-    console.log("Hello " + name);
+var number = 1;
+var count = document.getElementById('digit');
+function Plus(){ 
+    number++;
+    count.innerHTML = number;
 }
 
-var SayHello = function(firstname) {
-    console.log("Hello " + firstname)
+function Minus() {
+
+    if(number==1) {
+        alert("Minimum 1 mehsul secilmelidir");
+        return;
+    }
+
+    number--;
+    count.innerHTML = number;
 }
 
-var SayHello = firstname => console.log('Hello ' + firstname)
-
-var SayHello = (firstname) => {
-    console.log('Hello ' + firstname)
+function Click() {
+var x = document.getElementById('inp').value;
+    console.log(x)
 }
 
-ShowMessage("Altan",25);
-SayHello("Mayil");
 
-function Calc(x,y) {
-    return x* y;
-}
+/*
+var x = 10;
+delete x;
+console.log(x);
 
-var Calc = (x,y) => x*y;
-
-var Calc = function(x,y){
-    return x*y;
-}
-
-var Calc = (x,y) => {
-    return x * y;
-}
-console.log(Calc(5,10));
-
-
-var Show = function(name){
-    return name;
-}
-
-Show();
-
-var Show = name => name
+var students = [
+    Metin = {
+        id: 1,
+        name: "Metin",
+        age: 20
+    },
+    Amil = {
+        id: 2,
+        name: "Amil",
+        age:21
+    },
+    Altan = {
+        id: 10,
+        name: "Altan",
+        age:26
+    }
+]
 
 
-(function(name){
-    document.write("Salam " + name);
-})("Altan");
+/*
+class Group {
+    constructor(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    AddStudent(st);
 
-
-function Person(name,age,address) {
-    this.name = name;
-}
-
-var User = new Person("Altan");
-
-// var btn = document.getElementById('btn');
-// btn.onclick = function() {
-
-// }
-
-
-function Change() {
-    var body = document.getElementById('body');
-    console.log(body.style.backgroundColor);
-    if(body.style.filter==="invert(1) hue-rotate(180deg)") { 
-        body.style.filter="invert(0) hue-rotate(0deg)"
+    if(this.students.find(st=> st.id===students.id)) {
+        alert("Olmaz");
     }
     else{
-        body.style.filter="invert(1) hue-rotate(180deg)"
+        AddStudent();
+    }
+}
+
+const Person = {
+    firstName: "Altan",
+    lastName: "Ibrahimli",
+    age: 25,
+    isStudent: true,
+    address: {
+        city: "Baku",
+        region: "Sabail"
+    },
+    get fullName() {
+        return this.firstName + " " + this.lastName
+    }
+}
+
+// Object Literals
+console.log(Person.address.region);
+console.log(Person.address["region"]);
+
+var x = 10;
+var z = x;
+
+console.log(Person.fullName);
+
+console.log();
+
+function Person(ad,yas,unvan) {
+    this.ad = ad;
+    this.yas = yas;
+    this.unvan = unvan;
+    this.info = function() {
     }
 }
 
 
-// var Change = function() {
+class Student {
+    constructor(firstName,age) {
+        this.firstName = firstName;
+        this.age = age
+    }
+}
 
-// }
+var student = new Person("Altan",25,"Baku");
+var doctor = new Person("Amil",20,"Moscow");
+console.log(student.unvan);
 
-// var Change = () => {
 
-// }
+
+
+
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    address: "Baku"
+  };
+
+  console.log(person);
+  
+  const myArray = Object.values(person);
+  console.log(myArray);
+
+
+//   const person = {
+//     for: true,
+//     return: false,
+//     firstName: "John",
+//     lastName: "Doe",
+//     fullName: "",
+//     country: "",
+//     set cName(olke) {
+//         this.country = olke
+//     },
+//     set fName(ad) {
+//       this.fullName = ad;
+//     }
+//   };
+
+//   person.age = 20;
+//   delete person.age;
+//   person.country = db.Users.country;
+
+//   person.fName = "Altan Ibrahimli";
+
+//   console.log(person)
+  
+  */
+  
